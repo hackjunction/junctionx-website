@@ -5,6 +5,7 @@ import Scroll from 'react-scroll';
 import Partners from './Partners';
 import Tracks from './Tracks';
 import ContentSections from './ContentSections';
+import Welcome from './Welcome';
 
 class Landing extends React.Component {
   componentWillMount() {
@@ -14,6 +15,7 @@ class Landing extends React.Component {
     return (
       <div>
         {this.props.event ? this.props.event.name : null}
+        <Welcome />
         <Partners />
         <Tracks />
         <ContentSections />

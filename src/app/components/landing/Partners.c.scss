@@ -1,20 +1,22 @@
-.block {
-  color: #FBFBFB;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-}
+@import '../../stylesheets/variables';
 
 .separator {
   border-top: 1px solid rgba(0,0,0, 0.2);
 }
+
 .all_partners {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
+.imgPartner {
+  max-width: 100%;
+  border: 1px solid;
+  border-color: $primary;
+}
+
 .apply_button {
   padding: 20px 40px;
   margin-top: 5%;
