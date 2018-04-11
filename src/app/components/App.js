@@ -5,6 +5,8 @@ import Track from './Track';
 import NotFound from './NotFound';
 import MobileNav from './MobileNav';
 
+import '../stylesheets/main.scss';
+
 class App extends React.Component {
   render() {
     return (
