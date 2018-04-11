@@ -8,6 +8,6 @@ export function* getPartners() {
   // save the tracks in state
   yield put({
     type: 'GET_PARTNERS_SAVE',
-    event: partners.data
+    partners: partners.data
   });
 }

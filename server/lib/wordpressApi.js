@@ -30,7 +30,7 @@ export const getEvent = () => {
 
 export const getPartners = () => {
   return wordpressApiClient
-    .get('/posts?_embed&categories=4?per_page=100&author=' + EVENT_ID)
+    .get('/posts?_embed&categories=4&per_page=100&author=' + EVENT_ID)
     .then(partners => partners.data)
     .then(partners => {
       return partners.map(partner => {
@@ -46,7 +46,7 @@ export const getPartners = () => {
 
 export const getTracks = () => {
   return wordpressApiClient
-    .get('/posts?_embed&categories=3?per_page=100&author=' + EVENT_ID)
+    .get('/posts?_embed&categories=3&per_page=100&author=' + EVENT_ID)
     .then(tracks => tracks.data)
     .then(tracks => {
       return tracks.map(track => {

@@ -2,15 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
-import Partners from '.landing/Partners';
-import Tracks from '.landing/Tracks';
+import Partners from './landing/Partners';
 
 class Landing extends React.Component {
   componentWillMount() {
     this.props.dispatch({ type: 'GET_EVENT' });
   }
   render() {
-    return <div>{this.props.event ? this.props.event.name : null}</div>;
+    return (
+      <div>
+        {this.props.event ? this.props.event.name : null}
+        <Partners />
+      </div>
+    );
   }
 }
 

@@ -1,4 +1,4 @@
-export default function event(state = [], action) {
+export default function event(state = null, action) {
   switch (action.type) {
     case 'GET_EVENT_SAVE':
       return action.event;
