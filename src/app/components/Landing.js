@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Scroll from 'react-scroll';
+import Partners from '.landing/Partners';
+import Tracks from '.landing/Tracks';
 
 class Landing extends React.Component {
   componentWillMount() {
