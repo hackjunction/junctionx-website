@@ -8,7 +8,7 @@ import BlockHeader from '../viewBlocks/BlockHeader';
 const Partners = () => (
   <Scroll.Element name="partners">
     <Block className={styles.block}>
-      <BlockHeader title="PARTNER WITH US"/>
+      <BlockHeader title="PARTNER WITH US" />
       <Row className="junction_partners" center="xs">
         <Col xs={6} md={3}>
           <img

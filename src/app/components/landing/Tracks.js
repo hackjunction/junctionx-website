@@ -29,15 +29,14 @@ class Tracks extends Component {
           </Row>
           <BlockHeader title="BUILDING FOR TOMORROW">
             <p>
-              Junction 2017 was divided into multiple tracks, each including
-              several challenges set by our amazing partners. The best project
-              was awarded with the main prize of{" "}
+              Junction 2017 was divided into multiple tracks, each including several challenges set by our amazing
+              partners. The best project was awarded with the main prize of{' '}
               <span className={styles.text_highlight}>20k€</span>.
             </p>
           </BlockHeader>
           <ElementGrid
             grid={[[4, 4, 4], [6, 6], [4, 4, 4], [6, 6], [4, 4, 4]]}
-            elements= {this.props.tracks.map((track, i) => <TrackElement key={i} post={track} /> )}
+            elements={this.props.tracks.map((track, i) => <TrackElement key={i} post={track} />)}
           />
         </Block>
       </Scroll.Element>
