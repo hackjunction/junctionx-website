@@ -20,7 +20,7 @@ class Partners extends React.Component {
             {this.props.partners.map((partner, i) => (
               <Col xs={6} md={3} key={i}>
                 <a href={partner.url}>
-                  <img src={partner.logo} className="responsive" alt={partner.name} />
+                  <img src={partner.logo} className={styles.imgPartner} alt={partner.name} />
                 </a>
               </Col>
             ))}
