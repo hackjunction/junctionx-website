@@ -76,7 +76,23 @@ export const getContentSections = () => {
           header: section.acf.header,
           image: section.acf.image,
           link_text: section.acf.link_text,
-          link_url: section.acf.link_text
+          link_url: section.acf.link_text,
+          slug: section.slug
+        };
+      });
+    });
+};
+export const getScheduleEvents = () => {
+  return wordpressApiClient
+    .get('/posts?_embed&categories=6&author=' + EVENT_ID)
+    .then(scheduleEvents => scheduleEvents.data)
+    .then(scheduleEvents => {
+      return scheduleEvents.map(scheduleEvent => {
+        return {
+          name: scheduleEvent.title.rendered,
+          content: scheduleEvent.content.rendered,
+          time: scheduleEvent.acf.time,
+          suffix: scheduleEvent.acf.suffix
         };
       });
     });
