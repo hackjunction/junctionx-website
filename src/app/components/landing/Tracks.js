@@ -16,9 +16,9 @@ class Tracks extends React.Component {
     return (
       <Scroll.Element name="tracks">
         <Block className={styles.block}>
-          <BlockHeader title="TRACKS"/>
+          <BlockHeader title="TRACKS" />
           <Row className="junction_tracks" center="xs">
-            {/* Tähän kohtaan fetchatusta datasta trackit täyttämään */ }
+            {/* Tähän kohtaan fetchatusta datasta trackit täyttämään */}
             <Col xs={12} md={6} className="trackbox">
               <img
                 src="https://staging.hackjunction.com/wp-content/uploads/2017/08/elisa.png"
