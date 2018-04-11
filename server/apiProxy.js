@@ -39,7 +39,18 @@ apiRouter.get('/tracks', (req, res) => {
 
 apiRouter.get('/partners', (req, res) => {
   wordpressApi
-    .getPartners(req.query.year)
+    .getPartners()
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+apiRouter.get('/sections', (req, res) => {
+  wordpressApi
+    .getContentSections()
     .then(data => {
       res.json(data);
     })

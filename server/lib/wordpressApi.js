@@ -60,3 +60,20 @@ export const getTracks = () => {
       });
     });
 };
+export const getContentSections = () => {
+  return wordpressApiClient
+    .get('/posts?_embed&categories=5&author=' + EVENT_ID)
+    .then(contentSections => contentSections.data)
+    .then(contentSections => {
+      return contentSections.map(section => {
+        return {
+          name: section.title.rendered,
+          content: section.content.rendered,
+          header: section.acf.header,
+          image: section.acf.image,
+          link_text: section.acf.link_text,
+          link_url: section.acf.link_text
+        };
+      });
+    });
+};
