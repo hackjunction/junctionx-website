@@ -19,10 +19,14 @@ export const getEvent = () => {
     .then(event => {
       return {
         name: event[0].title.rendered,
-        description: event[0].acf.description,
+        heading1: event[0].acf.heading1,
+        content1: event[0].acf.content1,
+        heading2: event[0].acf.heading2,
+        content2: event[0].acf.content2,
         start_date: event[0].acf.end_date,
         end_date: event[0].acf.end_date,
-        location: event[0].acf.location,
+        address: event[0].acf.address,
+        country: event[0].acf.country,
         coordinates: event[0].acf.coordinates
       };
     });
