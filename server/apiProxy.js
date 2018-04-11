@@ -15,6 +15,17 @@ apiRouter.get('/posts', (req, res) => {
     });
 });
 
+apiRouter.get('/event', (req, res) => {
+  wordpressApi
+    .getEvent()
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 apiRouter.get('/tracks', (req, res) => {
   wordpressApi
     .getTracks()
