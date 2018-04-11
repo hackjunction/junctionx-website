@@ -20,11 +20,7 @@ class Tracks extends React.Component {
           <Row className="junction_tracks" center="xs">
             {this.props.tracks.map((track, i) => (
               <Col xs={12} md={6} key={i} className={styles.trackbox}>
-                <img
-                  src="https://staging.hackjunction.com/wp-content/uploads/2017/08/elisa.png"
-                  className="responsive"
-                  alt=""
-                />
+                <img src={track.image} className="responsive" alt={track.title} />
               </Col>
             ))}
           </Row>
