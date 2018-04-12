@@ -19,13 +19,14 @@ export const getEvent = () => {
     .then(event => {
       return {
         name: event[0].title.rendered,
-        heading1: event[0].acf.heading1,
+        header1: event[0].acf.header1,
         content1: event[0].acf.content1,
-        heading2: event[0].acf.heading2,
+        header2: event[0].acf.header2,
         content2: event[0].acf.content2,
         start_date: event[0].acf.end_date,
         end_date: event[0].acf.end_date,
         address: event[0].acf.address,
+        city: event[0].acf.city,
         country: event[0].acf.country,
         coordinates: event[0].acf.coordinates
       };

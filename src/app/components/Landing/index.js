@@ -12,15 +12,24 @@ class Landing extends React.Component {
     this.props.dispatch({ type: 'GET_EVENT' });
   }
   render() {
-    return (
+    var e = this.props.event;
+    console.log(e);
+    return e ? (
       <div>
-        {this.props.event ? this.props.event.name : null}
-        <Welcome />
+        <Welcome
+          name={e.name}
+          header1={e.header1}
+          content1={e.content1}
+          start_date={e.start_date}
+          end_date={e.end_date}
+          city={e.city}
+          country={e.country}
+        />
         <Partners />
         <Tracks />
         <ContentSections />
       </div>
-    );
+    ) : null;
   }
 }
 
