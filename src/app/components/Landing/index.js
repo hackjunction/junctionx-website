@@ -20,6 +20,8 @@ class Landing extends React.Component {
           name={e.name}
           header1={e.header1}
           content1={e.content1}
+          header2={e.header2}
+          content2={e.content2}
           start_date={e.start_date}
           end_date={e.end_date}
           city={e.city}
