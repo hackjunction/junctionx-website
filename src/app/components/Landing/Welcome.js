@@ -4,6 +4,8 @@ import Scroll from 'react-scroll';
 import PropTypes from 'prop-types';
 import styles from './Welcome.c.scss';
 import Block from '../viewBlocks/Block';
+import BlockHeader from '../viewBlocks/BlockHeader';
+
 
 const Welcome = props => (
   <Scroll.Element name="welcome">
@@ -13,25 +15,30 @@ const Welcome = props => (
           <img src="/images/junctionx_globe.png" alt="" className={styles.welcomeImage} />
         </Col>
         <Col xs={12} md={6} first="md" className="start-md">
-          <h1>{props.header1}</h1>
+          <h1 className={styles.h1Stuff}>{props.header1}</h1>
           <p dangerouslySetInnerHTML={{ __html: props.content1 }} />
         </Col>
+        <Col xs={12} md={12}>
+          <hr className={styles.separator} />
+        </Col>
       </Row>
+      <BlockHeader className={styles.subHeader} title={props.header2.toUpperCase()} />
       <Row>
-        <h1>{props.header2}</h1>
         <p>{props.content2}</p>
       </Row>
-      <Row>
+      <Row center='xs' middle='xs'>
         <Col xs={12} md={4}>
-          <p>{props.city}</p>
-          <p>{props.country}</p>
+          <h3> HELD IN</h3>
+          <h3 className={styles.h3Differ}>{props.city.toUpperCase()}</h3>
+          <h3>{props.country.toUpperCase()}</h3>
         </Col>
         <Col xs={12} md={4}>
-          <p>{props.start_date}</p>
-          <p>{props.end_date}</p>
+          <h3 className={styles.h3Differ}>{props.start_date.split("-")[2] + ". -"}</h3>
+          <h3 className={styles.h3Differ}>{props.end_date.split("-")[2] + "." + props.end_date.split("-")[1] + "."}</h3>
+          <h3>{props.end_date.split("-")[0]}</h3>
         </Col>
         <Col xs={12} md={4}>
-          <p>Placeholder text</p>
+          <h3>FOR EVERYONE & FOR FREE</h3>
         </Col>
       </Row>
     </Block>

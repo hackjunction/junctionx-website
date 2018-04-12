@@ -18,10 +18,10 @@ class ContentSections extends React.Component {
         {this.props.sections.map((section, i) => (
           <Scroll.Element key={i} name={section.slug}>
             <Block className={styles.block}>
-              <BlockHeader title={section.name} />
+              <BlockHeader title={section.name.toUpperCase()} />
               <Row center="xs">
-                <Col xs>
-                  <h className={styles.h}>{section.header}</h>
+                <Col xs className="start-md">
+                  <h1 className={styles.h}>{section.header.toUpperCase()}</h1>
                   <div dangerouslySetInnerHTML={{ __html: section.content }} />
                 </Col>
                 {section.image ? (
