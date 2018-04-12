@@ -5,6 +5,7 @@ import tracks from './tracks';
 import event from './event';
 import partners from './partners';
 import sections from './sections';
+import schedule from './schedule';
 
 const reducers = combineReducers({
   routing: routerReducer,
@@ -12,7 +13,8 @@ const reducers = combineReducers({
   tracks: tracks,
   event: event,
   partners: partners,
-  sections: sections
+  sections: sections,
+  schedule: schedule
 });
 
 export default reducers;

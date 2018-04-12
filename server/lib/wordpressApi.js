@@ -91,7 +91,8 @@ export const getScheduleEvents = () => {
       return scheduleEvents.map(scheduleEvent => {
         return {
           name: scheduleEvent.title.rendered,
-          content: scheduleEvent.content.rendered,
+          description: scheduleEvent.content.rendered,
+          date: scheduleEvent.acf.date,
           time: scheduleEvent.acf.time,
           suffix: scheduleEvent.acf.suffix
         };

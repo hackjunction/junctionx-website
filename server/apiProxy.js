@@ -59,4 +59,15 @@ apiRouter.get('/sections', (req, res) => {
     });
 });
 
+apiRouter.get('/schedule', (req, res) => {
+  wordpressApi
+    .getScheduleEvents()
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 export default apiRouter;

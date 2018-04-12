@@ -16,4 +16,7 @@ export default class ApiPosts {
   static getSections() {
     return api.get('/sections');
   }
+  static getSchedule() {
+    return api.get('/schedule');
+  }
 }

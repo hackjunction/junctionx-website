@@ -6,6 +6,7 @@ import Partners from './Partners';
 import Tracks from './Tracks';
 import ContentSections from './ContentSections';
 import Welcome from './Welcome';
+import Schedule from './Schedule';
 
 class Landing extends React.Component {
   componentWillMount() {
@@ -29,6 +30,7 @@ class Landing extends React.Component {
         />
         <Partners />
         <Tracks />
+        <Schedule />
         <ContentSections />
       </div>
     ) : null;
