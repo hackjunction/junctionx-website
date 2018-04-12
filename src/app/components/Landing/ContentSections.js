@@ -26,7 +26,7 @@ class ContentSections extends React.Component {
                 </Col>
                 {section.image ? (
                   <Col xs={12} md={4}>
-                    <img className={styles.img} src={section.image} />
+                    <img className={styles.img} src={section.image} alt="" />
                   </Col>
                 ) : null}
               </Row>

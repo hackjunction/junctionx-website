@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Grid } from 'react-flexbox-grid';
-import { Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import PropTypes from 'prop-types';
 import styles from './Block.c.scss';
 

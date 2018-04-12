@@ -6,7 +6,6 @@ import styles from './Welcome.c.scss';
 import Block from '../viewBlocks/Block';
 import BlockHeader from '../viewBlocks/BlockHeader';
 
-
 const Welcome = props => (
   <Scroll.Element name="welcome">
     <Block contentClassName={styles.blockContent}>
@@ -26,16 +25,16 @@ const Welcome = props => (
       <Row>
         <p>{props.content2}</p>
       </Row>
-      <Row center='xs' middle='xs'>
+      <Row center="xs" middle="xs">
         <Col xs={12} md={4}>
           <h3> HELD IN</h3>
           <h3 className={styles.h3Differ}>{props.city.toUpperCase()}</h3>
           <h3>{props.country.toUpperCase()}</h3>
         </Col>
         <Col xs={12} md={4}>
-          <h3 className={styles.h3Differ}>{props.start_date.split("-")[2] + ". -"}</h3>
-          <h3 className={styles.h3Differ}>{props.end_date.split("-")[2] + "." + props.end_date.split("-")[1] + "."}</h3>
-          <h3>{props.end_date.split("-")[0]}</h3>
+          <h3 className={styles.h3Differ}>{props.start_date.split('-')[2] + '. -'}</h3>
+          <h3 className={styles.h3Differ}>{props.end_date.split('-')[2] + '.' + props.end_date.split('-')[1] + '.'}</h3>
+          <h3>{props.end_date.split('-')[0]}</h3>
         </Col>
         <Col xs={12} md={4}>
           <h3>FOR EVERYONE & FOR FREE</h3>
