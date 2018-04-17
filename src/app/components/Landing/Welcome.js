@@ -3,6 +3,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import Scroll from 'react-scroll';
 import PropTypes from 'prop-types';
 import styles from './Welcome.c.scss';
+import Navigation from './Navigation';
 import Block from '../viewBlocks/Block';
 import BlockHeader from '../viewBlocks/BlockHeader';
 
@@ -40,6 +41,7 @@ const Welcome = props => (
           <h3>FOR EVERYONE & FOR FREE</h3>
         </Col>
       </Row>
+      <Navigation />
     </Block>
   </Scroll.Element>
 );
