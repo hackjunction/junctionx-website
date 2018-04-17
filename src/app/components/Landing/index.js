@@ -7,6 +7,7 @@ import Tracks from './Tracks';
 import ContentSections from './ContentSections';
 import Welcome from './Welcome';
 import Schedule from './Schedule';
+import Footer from './Footer';
 
 class Landing extends React.Component {
   componentWillMount() {
@@ -32,6 +33,9 @@ class Landing extends React.Component {
         <Tracks />
         <Schedule />
         <ContentSections />
+        <Footer
+          email={e.email}
+        />
       </div>
     ) : null;
   }

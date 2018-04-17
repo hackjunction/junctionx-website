@@ -36,7 +36,7 @@ class Schedule extends React.Component {
             {Object.entries(events_by_day)
               .sort((a, b) => a[0] > b[0])
               .map((day, i) => (
-                <Col key={i} xs={12} md={4}>
+                <Col key={i} xs={12} md={12} className={styles.name}>
                   <Row>
                     <Col>
                       <h1>{day[0]}</h1>
@@ -47,7 +47,7 @@ class Schedule extends React.Component {
                     .sort((a, b) => a.suffix > b.suffix)
                     .map((event, i) => (
                       <Row key={i} className={styles.event}>
-                        <Col xs={4}>
+                        <Col xs={1}>
                           {event.time}
                           {event.suffix !== 'None' ? event.suffix : null}
                         </Col>

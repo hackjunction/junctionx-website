@@ -4,13 +4,13 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import PropTypes from 'prop-types';
 import styles from './Block.c.scss';
 
-const Block = ({ className, contentClassName, children }) => (
+const Block = ({ className, contentClassName, children, noSeparator }) => (
   <div className={classNames([styles.container, className])}>
     <Grid fluid className={classNames([styles.content, contentClassName])}>
       {children}
       <Row className={styles.separator}>
         <Col xs={12} md={12}>
-          <hr className={styles.separator} />
+          {noSeparator ? null : <hr className={styles.separator} />}
         </Col>
       </Row>
     </Grid>

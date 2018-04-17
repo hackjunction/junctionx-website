@@ -17,10 +17,11 @@ class Tracks extends React.Component {
       <Scroll.Element name="tracks">
         <Block className={styles.block}>
           <BlockHeader title="TRACKS" />
-          <Row className="junction_tracks" center="xs">
+          <Row className={styles.trackDivs} center="xs">
             {this.props.tracks.map((track, i) => (
               <Col xs={12} md={6} key={i} className={styles.trackbox}>
-                <img src={track.image} className={styles.imgTrack} alt={track.title} />
+                <div className={styles.imgTrack} style={{background: "url(" + track.image + ")"}}>
+                </div>
               </Col>
             ))}
           </Row>
