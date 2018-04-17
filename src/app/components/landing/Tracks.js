@@ -20,8 +20,7 @@ class Tracks extends React.Component {
           <Row className={styles.trackDivs} center="xs">
             {this.props.tracks.map((track, i) => (
               <Col xs={12} md={6} key={i} className={styles.trackbox}>
-                <div className={styles.imgTrack} style={{background: "url(" + track.image + ")"}}>
-                </div>
+                <div className={styles.imgTrack} style={{ background: 'url(' + track.image + ')' }} />
               </Col>
             ))}
           </Row>

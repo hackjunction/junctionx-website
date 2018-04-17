@@ -33,9 +33,7 @@ class Landing extends React.Component {
         <Tracks />
         <Schedule />
         <ContentSections />
-        <Footer
-          email={e.email}
-        />
+        <Footer email={e.email} />
       </div>
     ) : null;
   }
