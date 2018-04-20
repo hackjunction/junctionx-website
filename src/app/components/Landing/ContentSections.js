@@ -23,6 +23,11 @@ class ContentSections extends React.Component {
                 <Col xs className="start-md">
                   <h1 className={styles.h}>{section.header.toUpperCase()}</h1>
                   <div dangerouslySetInnerHTML={{ __html: section.content }} />
+                  {section.link_url && (
+                    <a className={styles.link} href={section.link_url}>
+                      <div className={styles.linkButton}>{section.link_text}</div>
+                    </a>
+                  )}
                 </Col>
                 {section.image ? (
                   <Col xs={12} md={4}>

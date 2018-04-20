@@ -78,7 +78,7 @@ export const getContentSections = () => {
           header: section.acf.header,
           image: section.acf.image,
           link_text: section.acf.link_text,
-          link_url: section.acf.link_text,
+          link_url: section.acf.link_url,
           slug: section.slug
         };
       });
