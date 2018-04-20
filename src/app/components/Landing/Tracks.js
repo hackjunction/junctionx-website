@@ -19,8 +19,12 @@ class Tracks extends React.Component {
           <BlockHeader title="TRACKS" />
           <Row className={styles.trackDivs} center="xs">
             {this.props.tracks.map((track, i) => (
-              <Col xs={12} md={6} key={i} className={styles.trackbox}>
-                <div className={styles.imgTrack} style={{ background: 'url(' + track.image + ')' }} />
+              <Col xs={12} sm={8} md={6} key={i} className={styles.trackbox}>
+                <div className={styles.imgTrack} style={{ background: 'url(' + track.image + ')' }}>
+                  <div className={styles.transpr}>
+                    <h1 className={styles.title}>{track.title.toUpperCase()}</h1>
+                  </div>
+                </div>
               </Col>
             ))}
           </Row>

@@ -28,7 +28,8 @@ export const getEvent = () => {
         address: event[0].acf.address,
         city: event[0].acf.city,
         country: event[0].acf.country,
-        coordinates: event[0].acf.coordinates
+        coordinates: event[0].acf.coordinates,
+        email: event[0].acf.email
       };
     });
 };
