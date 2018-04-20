@@ -23,7 +23,7 @@ export const getEvent = () => {
         content1: event[0].acf.content1,
         header2: event[0].acf.header2,
         content2: event[0].acf.content2,
-        start_date: event[0].acf.end_date,
+        start_date: event[0].acf.start_date,
         end_date: event[0].acf.end_date,
         address: event[0].acf.address,
         city: event[0].acf.city,
