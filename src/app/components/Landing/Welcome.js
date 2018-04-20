@@ -11,7 +11,7 @@ const Welcome = props => (
   <Scroll.Element name="welcome">
     <Block contentClassName={styles.blockContent}>
       <Row className="junction_welcome" middle="xs" center="xs">
-        <Col xs={12} md={4} className={styles.welcome}>
+        <Col xs={6} md={4} className={styles.welcome}>
           <img src="/images/junctionx_globe.png" alt="" className={styles.welcomeImage} />
         </Col>
         <Col xs={12} md={6} first="md" className="start-md">
@@ -27,17 +27,17 @@ const Welcome = props => (
         <p>{props.content2}</p>
       </Row>
       <Row center="xs" middle="xs">
-        <Col xs={12} md={4}>
+        <Col className={styles.textColumn} xs={12} md={4}>
           <h3> HELD IN</h3>
           <h3 className={styles.h3Differ}>{props.city.toUpperCase()}</h3>
           <h3>{props.country.toUpperCase()}</h3>
         </Col>
-        <Col xs={12} md={4}>
+        <Col className={styles.textColumn} xs={12} md={4}>
           <h3 className={styles.h3Differ}>{props.start_date.split('-')[2] + '. -'}</h3>
           <h3 className={styles.h3Differ}>{props.end_date.split('-')[2] + '.' + props.end_date.split('-')[1] + '.'}</h3>
           <h3>{props.end_date.split('-')[0]}</h3>
         </Col>
-        <Col xs={12} md={4}>
+        <Col className={styles.textColumn} xs={12} md={4}>
           <h3>FOR EVERYONE & FOR FREE</h3>
         </Col>
       </Row>

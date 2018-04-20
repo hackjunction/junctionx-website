@@ -16,7 +16,7 @@ class Partners extends React.Component {
       <Scroll.Element name="partners">
         <Block className={styles.block}>
           <BlockHeader title="PARTNERS" />
-          <Row className="junction_partners" center="xs">
+          <Row className="junction_partners" center="xs" middle="xs">
             {this.props.partners.map((partner, i) => (
               <Col xs={6} md={3} key={i}>
                 <a href={partner.url}>

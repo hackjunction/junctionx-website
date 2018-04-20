@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Scroll from 'react-scroll';
 import Partners from './Partners';
 import Tracks from './Tracks';
 import ContentSections from './ContentSections';
@@ -19,7 +18,7 @@ class Landing extends React.Component {
     console.log(e);
     return e ? (
       <div>
-        <Header name={e.name}/>
+        <Header name={e.name} />
         <Welcome
           name={e.name}
           header1={e.header1}

@@ -5,32 +5,28 @@ import Scroll from 'react-scroll';
 import PropTypes from 'prop-types';
 import styles from './Navigation.c.scss';
 
+const NavigationButton = props => (
+  <Col xs={12} sm={6} md={3}>
+    <div className={styles.linkButton}>
+      <Scroll.Link activeClass="active" to={props.to} offset={-30} spy smooth duration={500}>
+        {props.title}
+      </Scroll.Link>
+    </div>
+  </Col>
+);
+NavigationButton.propTypes = {
+  to: PropTypes.string,
+  title: PropTypes.string
+};
+
 class Navigation extends React.Component {
   render() {
     return (
       <Row className={styles.linkRow} center="xs">
-        <Col className={styles.linkButton} xs={2}>
-          <Scroll.Link activeClass="active" to="partners" offset={-30} spy smooth duration={500}>
-            Partners
-          </Scroll.Link>
-        </Col>
-        <Col className={styles.linkButton} xs={2}>
-          <Scroll.Link activeClass="active" to="schedule" offset={-30} spy smooth duration={500}>
-            Schedule
-          </Scroll.Link>
-        </Col>
-        <Col className={styles.linkButton} xs={2}>
-          <Scroll.Link className={styles.link} activeClass="active" to="tracks" offset={-30} spy smooth duration={500}>
-            Tracks
-          </Scroll.Link>
-        </Col>
-        {this.props.sections.map((section, i) => (
-          <Col className={styles.linkButton} xs={2} key={i}>
-            <Scroll.Link to={section.slug} offset={-30} spy smooth duration={500}>
-              {section.name}
-            </Scroll.Link>
-          </Col>
-        ))}
+        <NavigationButton to="partners" title="Partners" />
+        <NavigationButton to="schedule" title="Schedule" />
+        <NavigationButton to="tracks" title="Tracks" />
+        {this.props.sections.map((section, i) => <NavigationButton to={section.slug} title={section.name} key={i} />)}
       </Row>
     );
   }
