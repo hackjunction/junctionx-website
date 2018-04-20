@@ -7,11 +7,9 @@ import styles from './Navigation.c.scss';
 
 const NavigationButton = props => (
   <Col xs={12} sm={6} md={3}>
-    <div className={styles.linkButton}>
-      <Scroll.Link activeClass="active" to={props.to} offset={-30} spy smooth duration={500}>
-        {props.title}
-      </Scroll.Link>
-    </div>
+    <Scroll.Link activeClass="active" to={props.to} offset={-30} spy smooth duration={500}>
+      <div className={styles.linkButton}>{props.title}</div>
+    </Scroll.Link>
   </Col>
 );
 NavigationButton.propTypes = {
