@@ -1,0 +1,23 @@
+@import '../../stylesheets/variables';
+
+.linkRow{
+  margin-top: 40px;
+}
+.linkButton{
+  border: 2px solid;
+  border-color: $brandcolor2;
+  color: $brandcolor2;
+  padding: 5px;
+  margin: auto;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.linkButton:hover{
+  background-color: $brandcolor2;
+  color: black;
+}
+.link {
+  display:inline-block;
+  width:100%;
+  height:100%;
+}
