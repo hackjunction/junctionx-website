@@ -33,9 +33,9 @@ const Welcome = props => (
           <h3>{props.country.toUpperCase()}</h3>
         </Col>
         <Col className={styles.textColumn} xs={12} md={4}>
-          <h3 className={styles.h3Differ}>{props.start_date.split('-')[2] + '. -'}</h3>
-          <h3 className={styles.h3Differ}>{props.end_date.split('-')[2] + '.' + props.end_date.split('-')[1] + '.'}</h3>
-          <h3>{props.end_date.split('-')[0]}</h3>
+          <h3 className={styles.h3Differ}>{props.start_date}</h3>
+          <h3>—</h3>
+          <h3 className={styles.h3Differ}>{props.end_date}</h3>
         </Col>
         <Col className={styles.textColumn} xs={12} md={4}>
           <h3>FOR EVERYONE & FOR FREE</h3>
