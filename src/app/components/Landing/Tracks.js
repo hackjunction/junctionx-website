@@ -22,7 +22,7 @@ class Tracks extends React.Component {
               <Col xs={12} sm={8} md={6} key={i} className={styles.trackbox}>
                 <div className={styles.imgTrack} style={{ background: 'url(' + track.image + ')' }}>
                   <div className={styles.transpr}>
-                    <h1 className={styles.title}>{track.title.toUpperCase()}</h1>
+                    <h2 className={styles.title1}>{track.title.toUpperCase()}</h2>
                   </div>
                 </div>
               </Col>

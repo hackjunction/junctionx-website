@@ -8,6 +8,7 @@ import ContentSections from './ContentSections';
 import Welcome from './Welcome';
 import Schedule from './Schedule';
 import Footer from './Footer';
+import Header from './Header';
 
 class Landing extends React.Component {
   componentWillMount() {
@@ -18,6 +19,7 @@ class Landing extends React.Component {
     console.log(e);
     return e ? (
       <div>
+        <Header name={e.name}/>
         <Welcome
           name={e.name}
           header1={e.header1}
