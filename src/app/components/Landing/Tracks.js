@@ -21,7 +21,7 @@ class Tracks extends React.Component {
           <Row className={styles.trackDivs} center="xs">
             {this.props.tracks.map((track, i) => (
               <Col xs={12} sm={8} md={6} key={i} className={styles.trackbox}>
-                <Link to={`/tracks/${track.slug}`}>
+                <Link className={styles.link} to={`/tracks/${track.slug}`}>
                   <div className={styles.imgTrack} style={{ background: 'url(' + track.image + ')' }}>
                     <div className={styles.transpr}>
                       <h2 className={styles.title1}>{track.title.toUpperCase()}</h2>

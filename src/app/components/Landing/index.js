@@ -11,7 +11,7 @@ import Header from './Header';
 
 class Landing extends React.Component {
   componentWillMount() {
-    this.props.dispatch({ type: 'GET_EVENT' });
+    if (!this.props.event) this.props.dispatch({ type: 'GET_EVENT' });
   }
   render() {
     var e = this.props.event;
