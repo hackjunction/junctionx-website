@@ -10,6 +10,11 @@ const Footer = props => (
       <Col xs={12} md={4}>
         {props.email && <h3>CONTACT:</h3>}
         <p>{props.email}</p>
+        {props.external && (
+          <a className={styles.a} href={props.external_url}>
+            {props.external}
+          </a>
+        )}
         <a className={styles.a} href="https://www.hackjunction.com/">
           JUNCTION
         </a>
@@ -18,7 +23,9 @@ const Footer = props => (
   </Block>
 );
 Footer.propTypes = {
-  email: PropTypes.string
+  email: PropTypes.string,
+  external: PropTypes.string,
+  external_url: PropTypes.string
 };
 
 export default Footer;

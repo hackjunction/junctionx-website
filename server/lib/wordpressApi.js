@@ -29,7 +29,9 @@ export const getEvent = () => {
         city: event[0].acf.city,
         country: event[0].acf.country,
         coordinates: event[0].acf.coordinates,
-        email: event[0].acf.email
+        email: event[0].acf.email,
+        external: event[0].acf.external,
+        external_url: event[0].acf.external_url
       };
     });
 };
