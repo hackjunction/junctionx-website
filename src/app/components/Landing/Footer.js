@@ -11,9 +11,11 @@ const Footer = props => (
         {props.email && <h3>CONTACT:</h3>}
         <p>{props.email}</p>
         {props.external && (
-          <a className={styles.a} href={props.external_url}>
-            {props.external}
-          </a>
+          <p>
+            <a className={styles.a} href={props.external_url}>
+              {props.external}
+            </a>
+          </p>
         )}
         <a className={styles.a} href="https://www.hackjunction.com/">
           JUNCTION
